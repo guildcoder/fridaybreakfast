@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Friday Breakfast</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
+
+  <!-- Web App / Add to Home Screen (iOS) -->
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="theme-color" content="#0b6f2b" />
+
+  <!-- Inline apple-touch-icon (data URI SVG) so Home Screen icon shows -->
+  <link rel="apple-touch-icon" href='data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512"><rect width="100%" height="100%" rx="48" ry="48" fill="%230b6f2b"/><text x="50%" y="52%" font-family="Arial" font-weight="700" font-size="120" fill="white" text-anchor="middle" dominant-baseline="middle">FB</text></svg>'>
+
+  <!-- Favicon as data URI PNG-like (use small SVG) -->
+  <link rel="icon" href='data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64"><rect width="100%" height="100%" rx="10" ry="10" fill="%230b6f2b"/><text x="50%" y="50%" font-family="Arial" font-weight="700" font-size="30" fill="white" text-anchor="middle" dominant-baseline="central">FB</text></svg>'>
+
+  <!-- Web Manifest (small, references same inline icon) -->
+  <link rel="manifest" href="manifest.json">
+
+  <!-- Pixel-like font -->
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="overlay" class="overlay">
+    <h1 id="title" class="title">Friday Breakfast</h1>
+    <button id="startBtn" class="start-btn">Start Game!</button>
+    <p class="hint">Use the joystick at the bottom to move up and sideways. Reach the top for breakfast!</p>
+  </div>
+
+  <canvas id="gameCanvas" class="game-canvas"></canvas>
+
+  <!-- Floating joystick -->
+  <div id="joystick" class="joystick" aria-hidden="true">
+    <div class="stick-bg"></div>
+    <div class="stick-knob"></div>
+  </div>
+
+  <!-- Overlays for game over and win -->
+  <div id="message" class="message hidden"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
